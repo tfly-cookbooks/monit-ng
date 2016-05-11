@@ -1,3 +1,68 @@
+# 2.3.0 / 2016-03-09
+
+* add ubuntu 16.04 support (thanks @micred!)
+* allow array as group attribute (thanks @smt116!)
+* allow specifying check mode (active,passive,manual) (thanks @yaniv-cb4!)
+* specify pidfile in monitrc (thanks @tarcinil!)
+
+# 2.2.1 / 2016-01-08
+
+* using timeout and as-user, specify as-user first (thanks @dansteen!)
+
+# 2.2.0 / 2015-10-21
+
+* add start/stop timeouts
+
+# 2.1.0 / 2015-09-01
+
+* run syntax check before starting monit via upstart (thanks @helgi!)
+* have upstart run post-start script to wait for monit to become available (thanks @helgi!)
+
+# 2.0.3 / 2015-08-25
+
+* skip package autostart on install (thanks @helgi!)
+
+# 2.0.2 / 2015-07-14
+
+* add attribute to skip service actions
+
+# 2.0.1 / 2015-07-02
+
+* add "depends" attribute (thanks @kcd83!)
+* allow nil to disable listen address specification (thanks @kcd83!)
+
+# 2.0.0 / 2015-06-17
+
+* consolidate repo/source recipe into "install" recipe
+* move service management into separate recipe
+* remove the common-service recipes
+* testing and documentation improvements
+
+# 1.8.1 / 2015-06-14
+
+* fix backwards compatibility with "subscriptions"
+
+# 1.8.0 / 2015-06-11
+
+# update to latest monit release: 5.14
+* better version comparison for old SSL bug
+* fix check_id attribute to support check_type "system". thanks @jorhett!
+* update proactive reload ruby_block naming for clarity
+* permit disabling proactive reloads
+
+# 1.7.0 / 2015-06-05
+
+* add alert, but_not_on, alert_events attributes for per-check alert event control (thanks @cpakman!)
+
+# 1.6.4 / 2015-05-15
+
+* fix upstart service name for postfix (thanks @szymonpk!)
+* use verify attribute on control file templates when using Chef >= 12
+
+# 1.6.3 / 2015-05-06
+
+* update to latest monit release
+
 # 1.6.2 / 2015-04-16
 
 * start monit service later to enable chef run to cleanup busted LWRP includes that cause service start failures (thanks @vkhatri!)

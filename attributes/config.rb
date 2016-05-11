@@ -31,6 +31,9 @@ default['monit']['config'].tap do |conf|
   # where to save state between startups
   conf['state_file'] = '/var/run/monit.state'
 
+  # where to save pid of current process
+  conf['pid_file'] = '/var/run/monit.pid'
+
   # list of subscribers to all alerts
   conf['subscribers'] = []
 
@@ -54,4 +57,10 @@ default['monit']['config'].tap do |conf|
     monit
   EOT
   conf['mail_servers'] = []
+
+  # monit built-in configuration files path
+  conf['built_in_config_path'] = '/etc/monit/monitrc.d'
+
+  # what built-in configurations to load
+  conf['built_in_configs'] = []
 end
